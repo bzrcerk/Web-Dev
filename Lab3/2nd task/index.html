@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDo List</title>
+
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<form action="submit">
+			<h1>todo list</h1>
+			<div class='input-field'>
+				<input type="text" class='input' placeholder='Enter task...' id='input'>
+				<button class='add-btn'>Add</button>
+			</div>
+			<ul class=' todo-list'>
+				<li class='todo'>
+					<p>Buy milk</p>
+					<div class="right-block">
+						<div class='checkbox checked'></div>
+						<button class='del-btn'>
+							<div class="del-img"></div>
+						</button>
+					</div>
+				</li>
+				<li class='todo done'>
+					<p>Make Laboratory</p>
+
+					<div class="right-block">
+						<div class='checkbox'></div>
+						<button class='del-btn'>
+							<div class="del-img"></div>
+						</button>
+					</div>
+				</li>
+			</ul>
+		</form>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
