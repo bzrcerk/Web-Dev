@@ -1,0 +1,10 @@
+<div>
+  @for (p of products; track p.id) {
+    <div>
+      {{ p.name }}
+      <img src="{{p.image}}" alt="{{ p.name }}" width="100px">
+    </div>
+  } @empty {
+    <div>No Items</div>
+  }
+</div>

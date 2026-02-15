@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import {ProductListComponent} from './components/product-list-component/product-list-component';
+
+@Component({
+  selector: 'app-root',
+  imports: [
+    ProductListComponent
+
+  ],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+
+}

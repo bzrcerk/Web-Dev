@@ -5,6 +5,7 @@ const addBtn = document.querySelector('.add-btn')
 let todos = []
 
 function render() {
+	todos = todos.reverse()
 	taskList.innerHTML = ''
 	for (let i = 0; i < todos.length; i++) {
 		const li = document.createElement('li')
