@@ -1,0 +1,8 @@
+<div class="stars">
+  @for (star of stars; track $index) {
+    <img
+      [src]="getSrc($index)"
+      class="star"
+    >
+  }
+</div>

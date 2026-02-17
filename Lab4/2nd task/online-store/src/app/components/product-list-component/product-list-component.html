@@ -1,9 +1,6 @@
-<div>
+<div class="container">
   @for (p of products; track p.id) {
-    <div>
-      {{ p.name }}
-      <img src="{{p.image}}" alt="{{ p.name }}" width="100px">
-    </div>
+    <app-product-card [product]="p"></app-product-card>
   } @empty {
     <div>No Items</div>
   }

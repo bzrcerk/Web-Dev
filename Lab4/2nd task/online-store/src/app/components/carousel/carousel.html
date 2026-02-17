@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="thumb-main">
+    <img [src]="images[activeIndex]" alt="123">
+    <button class="nav prev" (click)="prev()">‹</button>
+    <button class="nav next" (click)="next()">›</button>
+  </div>
+
+  <div class="thumb-container">
+    @for (src of images; track $index) {
+      <button
+        class="thumb-btn"
+        (click) = "setActive($index)"
+        [ngClass]="{active : $index === activeIndex}"
+      >
+        <img [src]="src" [alt]="$index" class="thumb-img">
+      </button>
+    }
+  </div>
+</div>

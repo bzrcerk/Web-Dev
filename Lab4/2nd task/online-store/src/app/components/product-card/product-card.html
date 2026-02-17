@@ -1,0 +1,23 @@
+<div class="container-card">
+  @if (productMore) {
+    <div @expandFade class="desc-container">
+      <button class="view-more-btn" (click)="viewMore()">↑</button>
+      <p class="desc">{{ product.description }}</p>
+    </div>
+  } @else {
+    <p class="price">{{ product.price | number:'1.0-0' }} ₸</p>
+    <app-carousel [images]="product.images"></app-carousel>
+    <button class="view-more-btn"  (click)="viewMore()">↑</button>
+    <div class="content">
+      <div class="l-content">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <app-rating-star [rating]="product.rating"></app-rating-star>
+      </div>
+      <div class="r-content">
+        <a class="telegram link" href=""><img src="/assets/telegram-icon.png" alt=""></a>
+        <a class="whatsapp link" href=""><img src="/assets/whatsapp-icon.png" alt=""></a>
+        <a [href]="product.link" class="link"><img src="/assets/kaspi-icon.png" alt=""></a>
+      </div>
+    </div>
+  }
+</div>
