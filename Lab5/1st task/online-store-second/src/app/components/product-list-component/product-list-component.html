@@ -1,0 +1,7 @@
+<div class="container">
+  @for (p of SelectedCategory; track p.id) {
+    <app-product-card [product]="p" (deleteProduct)="deleteProductBtn($event)"></app-product-card>
+  } @empty {
+    <div>No Items</div>
+  }
+</div>

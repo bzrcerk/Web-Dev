@@ -1,0 +1,18 @@
+<button (click)="changeVis()" class="burger-btn">
+  @if (isVisible) {
+    <img src="/assets/cross.png" alt="" class="cross-img">
+    <div class="menu-container">
+      <form>
+        <input type="radio" id="all" [(ngModel)]="SelectedCategory" [value]="'all'" (change)="selectCategory()" name="category" (click)="changeVis()">
+        <label for="all" (click)="changeVis()">Все товары</label>
+        @for (p of productsCategories; track $index) {
+          <input type="radio" id="{{ $index }}" class="input-cat" [(ngModel)]="SelectedCategory" [value]="p" (change)="selectCategory()" name="category" (click)="changeVis()">
+          <label for="{{ $index }}" (click)="changeVis()">{{ p }}</label>
+        }
+      </form>
+    </div>
+  } @else {
+    <img src="/assets/burger.png" alt="" class="burger-img">
+  }
+</button>
+
