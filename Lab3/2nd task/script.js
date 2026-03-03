@@ -53,7 +53,7 @@ function render() {
 
 addBtn.addEventListener('click', e => {
 	e.preventDefault()
-	if (taskInput.value != '') {
+	if (taskInput.value !== '') {
 		todos.push({
 			id: Date.now(),
 			text: taskInput.value,

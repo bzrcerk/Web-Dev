@@ -1,0 +1,14 @@
+@if (albums) {
+  <div class="container">
+    @for (a of albums; track a.id) {
+      <div class="card">
+        <h1 class="title">{{ a.title }}</h1>
+        <a [routerLink] = '[a.id]'><button class="detail-btn">View Details</button></a>
+        <button (click)="deleteAlbum(a.id)" class="delete-btn">Delete</button>
+      </div>
+    }
+  </div>
+} @else {
+  <h1>Loading...</h1>
+}
+

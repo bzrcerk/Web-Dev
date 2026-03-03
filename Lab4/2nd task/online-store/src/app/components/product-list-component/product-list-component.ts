@@ -21,8 +21,4 @@ export class ProductListComponent {
     this.products  = this.productService.getProducts();
   }
 
-
-
-
-
 }

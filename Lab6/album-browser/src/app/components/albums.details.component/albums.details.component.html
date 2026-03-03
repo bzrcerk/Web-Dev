@@ -1,0 +1,12 @@
+<a [routerLink]="['/albums']"><button class="back-btn">← Back</button></a>
+@if (album) {
+  <div class="container">
+    <h1 class="id">Album #{{ album.id }}</h1>
+    <h1 class="title">Album name: {{ album.title }}</h1>
+    <form>
+      <input #title name="title" placeholder="Type mew album name..." [value]="album.title">
+      <button type="button" (click)="handleChanges(title.value)" class="sbm-btn">Submit</button>
+    </form>
+    <a routerLink = 'photos' class="more-link"><button class="more-btn">View photos →</button></a>
+  </div>
+}

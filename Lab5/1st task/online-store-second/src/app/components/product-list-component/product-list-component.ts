@@ -18,10 +18,10 @@ export class ProductListComponent {
   protected filteredProducts : ProductModel[];
   @Input() InSelectedCategory !: string;
 
-  constructor(private productService: ProductService) {
+  constructor(productService: ProductService) {
     this.ProductService = productService;
-    this.products  = this.productService.getProducts();
-    this.filteredProducts = this.productService.getProducts();
+    this.products  = this.ProductService.getProducts();
+    this.filteredProducts = this.ProductService.getProducts();
   }
 
   deleteProductBtn(id : number) {

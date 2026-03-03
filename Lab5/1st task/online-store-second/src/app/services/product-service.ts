@@ -349,7 +349,7 @@ export class ProductService {
   //   this.products.push(product);
   // }
 
-  public getProducts() : ProductModel[] {
+  public getProducts(): ProductModel[] {
     return this.products;
   }
 

@@ -1,0 +1,10 @@
+<a [routerLink]="['/albums', id]"><button class="back-btn">← Back</button></a>
+@if (photos$ | async ; as photos) {
+  <div class="container">
+    @for (p of photos; track p.id) {
+      <img [src]="'https://placehold.co/150x150?text=' + p.id" [attr.alt]="p.id">
+    }
+  </div>
+} @else {
+  Loading...
+}
