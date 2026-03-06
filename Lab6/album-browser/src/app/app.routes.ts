@@ -4,6 +4,8 @@ import { AboutPage } from './pages/aboutPage/about';
 import { AlbumsPage } from './pages/albumsPage/albums';
 import {AlbumsDetailsComponent} from './components/albums.details.component/albums.details.component';
 import {AlbumsPhotosComponent} from './components/albums.photos.component/albums.photos.component';
+import {TestPage} from './pages/test-page/test-page';
+
 
 export const routes: Routes = [
   {
@@ -30,6 +32,10 @@ export const routes: Routes = [
   {
     path : "albums/:id/photos",
     component : AlbumsPhotosComponent
+  },
+  {
+    path : 'test',
+    component : TestPage
   },
   {
     path : "**",
